@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Link from "next/link";
+import { Navbar } from "./components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,29 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#18181B]`}
       >
-        <div className="flex justify-between items-center px-8 py-8 max-w-5xl relative">
-          <nav className="navbar bg-base-100 mx-auto border rounded-2xl border-zinc-800 space-x-8">
-            <div className="flex-1">
-              <Link href="/" className="btn btn-ghost normal-case text-base">Colin Cason</Link>
-            </div>
-            <div className="flex-none">
-              <button className="btn btn-square btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block h-5 w-5 stroke-current lg:hidden">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
-            </div>
-          </nav>
-          <Link href="/cv.pdf" target="_blank" className="btn inline-flex hover:opacity-80 bg-slate-600">Download CV</Link>
-        </div>
+        <Navbar />
         {children}
       </body>
     </html>
