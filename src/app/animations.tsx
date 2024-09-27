@@ -16,14 +16,9 @@ export const textVariants: Variants = {
 };
 
 export const coverVariants: Variants = {
-  hidden: {
-    width: '100%',
-  },
-  visible: {
-    width: '0%',
-    transition: {
-      duration: 0.4,
-      ease: 'easeIn',
-    },
-  },
+  animate: {
+    width: ['0%', '100%', '0%'],
+    left: ['0%', '0%', '100%'],
+    transition: { duration: 0.5, times: [0, 0.5, 1] }
+  }
 }

@@ -1,25 +1,15 @@
 'use client'
 import Image from "next/image";
-import { coverVariants, textVariants } from "./animations";
-import TextReveal from "./components/TextReveal";
+// import { coverVariants, textVariants } from "./animations";
+// import TextReveal from "./components/TextReveal";
+import BubbleText from "./components/BubbleText";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 sm:items-start">
         <div className="flex flex-col gap-1 -translate-x-48 -translate-y-24">
-          <TextReveal
-            text="Frontend"
-            coverVariants={coverVariants}
-            textVariants={textVariants}
-            className="text-8xl"
-          />
-          <TextReveal
-            text="Developer"
-            coverVariants={coverVariants}
-            textVariants={textVariants}
-            className="text-8xl"
-          />
+          <BubbleText />
         </div>
       </main>
 

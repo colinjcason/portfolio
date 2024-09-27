@@ -22,7 +22,7 @@ const SlideTabs = () => {
 
   return (
     <ul
-      className="relative mx-auto flex w-fit rounded-full p-1"
+      className="relative mx-auto flex w-fit rounded-full p-1 gap-10"
       onMouseLeave={() => {
         setPosition((pv) => ({
           ...pv,
@@ -69,10 +69,11 @@ const Tab = ({
       className="relative z-10 block cursor-pointer px-3 py-1.5 uppercase text-teal-300 mix-blend-difference md:px-5 md:py-3 md:text-base"
     >
       <TextReveal
-        text={children}
         coverVariants={coverVariants}
         textVariants={textVariants}
-      />
+      >
+        {children}
+      </TextReveal>
     </Link>
   );
 };
